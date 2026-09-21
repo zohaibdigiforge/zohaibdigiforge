@@ -1,0 +1,237 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        ('email' in request.auth.token && request.auth.token.email.lower() == 'zohaibdigiforge@gmail.com') ||
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+         'role' in get(/databases/$(database)/documents/users/$(request.auth.uid)).data &&
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role in ['admin', 'super_admin'])
+      );
+    }
+
+    // Public catalog data (read-only for public, admin write, allow public share increments)
+    match /categories/{categoryId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /subcategories/{subcategoryId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /products/{productId} {
+      allow read: if true;
+      allow create, delete: if isAdmin();
+      allow update: if isAdmin() || (
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['shares'])
+      );
+    }
+
+    match /bundles/{bundleId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /collections/{collectionId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /mega_pass/{docId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /tool_bundles/{bundleId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Customer orders: public creation (checkout), lookup tracking, admin modification & user linking
+    match /orders/{orderId} {
+      allow read, create, update, delete: if true;
+    }
+
+    // Abandoned carts: customer tracking allowed to create/update, admin only for viewing/cleaning
+    match /abandoned_carts/{cartId} {
+      allow read, create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    // Coupons: admin-only management and lookup
+    match /coupons/{couponId} {
+      allow read, write: if isAdmin();
+    }
+
+    // Testimonials & Reviews: public read & submission, admin moderation
+    match /testimonials/{testimonialId} {
+      allow read, create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    match /reviews/{reviewId} {
+      allow read, create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    // Newsletter Subscribers: public signup, admin only read/manage
+    match /newsletter_subscribers/{subscriberId} {
+      allow create, update: if true;
+      allow read, delete: if isAdmin();
+    }
+
+    match /newsletters_sent/{sendId} {
+      allow read, write: if isAdmin();
+    }
+
+    // Inquiries & Feedback: public submission and tracking
+    match /contactInquiries/{inquiryId} {
+      allow read, create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    match /serviceInquiries/{inquiryId} {
+      allow read, create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    match /checkoutFeedback/{feedbackId} {
+      allow read, create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    match /chatLogs/{logId} {
+      allow read, create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    // Public Site Configurations & Static Pages
+    match /siteSettings/{settingId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /legalPages/{pageId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /faqs/{faqId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /joinPageLinks/{linkId} {
+      allow read: if true;
+      allow create, delete: if isAdmin();
+      allow update: if isAdmin() || (
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['clicks', 'clickCount'])
+      );
+    }
+
+    match /joinPageSettings/{settingId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Notifications: public notifications are read-only for public, admin write
+    match /notifications/{notificationId} {
+      allow read, create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    // Admin Notifications: completely restricted to Admin
+    match /admin_notifications/{notificationId} {
+      allow read, write: if isAdmin();
+    }
+
+    // User Profiles: Strict ownership & Privilege Escalation Prevention
+    match /users/{userId} {
+      allow read: if isSignedIn() && (request.auth.uid == userId || isAdmin());
+      allow create: if isSignedIn() && (
+        isAdmin() ||
+        (request.auth.uid == userId && (
+          !('role' in request.resource.data) ||
+          request.resource.data.role in ['customer', 'user', 'member']
+        ))
+      );
+      allow update: if isSignedIn() && (
+        isAdmin() ||
+        (request.auth.uid == userId && (
+          !('role' in request.resource.data) ||
+          !('role' in resource.data) ||
+          request.resource.data.role == resource.data.role
+        ))
+      );
+      allow delete: if isSignedIn() && (request.auth.uid == userId || isAdmin());
+    }
+
+    // User Private Carts: only owner or admin
+    match /user_carts/{userId} {
+      allow read, write: if isSignedIn() && (request.auth.uid == userId || isAdmin());
+    }
+
+    // Referral Profiles: read & stats tracking allowed, admin delete
+    match /referral_profiles/{userId} {
+      allow read, create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    // Security Threats & WAF: submissions allowed from server/client, admin only for viewing/resolution
+    match /security_threats/{threatId} {
+      allow create, update: if true;
+      allow read, delete: if isAdmin();
+    }
+
+    // Banned IPs list
+    match /banned_ips/{ip} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Newsletter logs
+    match /newsletter_logs/{logId} {
+      allow create, update: if true;
+      allow read, delete: if isAdmin();
+    }
+
+    // System Audit Logs & Analytics
+    match /audit_logs/{logId} {
+      allow create, update: if true;
+      allow read, delete: if isAdmin();
+    }
+
+    match /analytics_events/{eventId} {
+      allow create, update: if true;
+      allow read, delete: if isAdmin();
+    }
+
+    match /analyticsEvents/{eventId} {
+      allow create, update: if true;
+      allow read, delete: if isAdmin();
+    }
+
+    match /shareEvents/{eventId} {
+      allow create, update: if true;
+      allow read, delete: if isAdmin();
+    }
+
+    // Cloud Backups & History: strictly Admin only
+    match /cloud_backups/{backupId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /backup_history/{backupId} {
+      allow read, write: if isAdmin();
+    }
+  }
+}
+

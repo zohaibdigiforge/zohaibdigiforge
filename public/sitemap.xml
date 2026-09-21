@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.zohaibdigiforge.store/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  
+  <!-- Digital Resources Store Catalog -->
+  <url>
+    <loc>https://www.zohaibdigiforge.store/resources</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Main Category Catalogs -->
+  <url>
+    <loc>https://www.zohaibdigiforge.store/resources?category=courses</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.zohaibdigiforge.store/resources?category=pro-tools</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.zohaibdigiforge.store/resources?category=softwares</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.zohaibdigiforge.store/resources?category=templates</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.zohaibdigiforge.store/resources?category=graphics-assets</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.zohaibdigiforge.store/resources?category=ebooks</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Bespoke Digital Services -->
+  <url>
+    <loc>https://www.zohaibdigiforge.store/services</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Complete Verified Product Suite -->
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-1</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-2</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-3</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-4</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-5</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-6</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-7</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-8</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-9</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-10</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-11</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-12</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-13</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-14</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-15</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-16</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-17</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-18</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-19</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-20</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-21</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-22</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-23</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-24</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-25</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-26</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-27</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-28</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-29</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-30</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-31</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-32</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-33</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-34</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-35</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-36</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://www.zohaibdigiforge.store/product/prod-37</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+
+  <!-- Important Information & Trust Pages -->
+  <url>
+    <loc>https://www.zohaibdigiforge.store/about</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.zohaibdigiforge.store/contact</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.zohaibdigiforge.store/faq</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.zohaibdigiforge.store/join-us</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.zohaibdigiforge.store/sitemap</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Legal & Compliance Policies -->
+  <url>
+    <loc>https://www.zohaibdigiforge.store/privacy</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://www.zohaibdigiforge.store/terms</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://www.zohaibdigiforge.store/refund</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+</urlset>

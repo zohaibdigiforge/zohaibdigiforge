@@ -1,0 +1,110 @@
+# Robots.txt for Zohaib DigiForge
+# https://www.zohaibdigiforge.store
+
+User-agent: *
+Allow: /
+Allow: /resources*
+Allow: /product/*
+Allow: /services*
+Allow: /about*
+Allow: /contact*
+Allow: /faq*
+Allow: /sitemap*
+Allow: /join-us*
+Allow: /privacy*
+Allow: /terms*
+Allow: /refund*
+Disallow: /admin*
+Disallow: /admin-dashboard*
+Disallow: /dashboard*
+Disallow: /account*
+Disallow: /cart*
+Disallow: /checkout*
+Disallow: /auth*
+Disallow: /signin*
+Disallow: /signup*
+Disallow: /order-confirmation*
+Disallow: /api/
+Disallow: /?view=admin*
+Disallow: /?view=admin-dashboard*
+Disallow: /?view=dashboard*
+Disallow: /?view=cart*
+Disallow: /?view=checkout*
+Disallow: /?view=auth*
+Disallow: /?view=order-confirmation*
+
+# AI Crawlers & LLM Agent Directives (Agentic Browsing Enabled)
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /admin*
+Disallow: /dashboard*
+Disallow: /cart*
+Disallow: /checkout*
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Dedicated Search Engine Bot Rules
+User-agent: Googlebot
+Allow: /
+Disallow: /admin*
+Disallow: /dashboard*
+Disallow: /cart*
+Disallow: /checkout*
+Disallow: /auth*
+Disallow: /api/
+
+User-agent: Googlebot-Image
+Allow: /Logo.png
+Allow: /logo.png
+Allow: /logo.webp
+Allow: /icon.png
+Allow: /icon.webp
+Allow: /favicon.ico
+Allow: /favicon*.png
+Allow: /favicon.svg
+Allow: /apple-touch-icon.png
+Allow: /assets/
+
+User-agent: Google Favicon
+Allow: /
+
+User-agent: Google-Favicon
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin*
+Disallow: /dashboard*
+Disallow: /cart*
+Disallow: /checkout*
+Disallow: /auth*
+Disallow: /api/
+
+# Sitemap & Host Definition
+Host: https://www.zohaibdigiforge.store
+Sitemap: https://www.zohaibdigiforge.store/sitemap.xml

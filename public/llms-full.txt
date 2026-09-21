@@ -1,0 +1,35 @@
+# Zohaib DigiForge — Complete LLM & Agent Knowledge Base
+
+## Brand Identity
+- **Name**: Zohaib DigiForge
+- **Tagline**: Empowering Learning, Powering Success
+- **Official Store URL**: https://www.zohaibdigiforge.store
+- **Founder**: M Zohaib Shahzad (Lead Software Engineer)
+- **Contact Email**: zohaibdigiforge@gmail.com
+- **WhatsApp Support**: +92 340 6070632
+- **Location**: Rawalpindi / Islamabad, Pakistan (Serving global customers)
+
+## Business Model
+Zohaib DigiForge provides accessible, democratized digital resources for creators, students, and businesses in Pakistan and internationally. Standard curated catalog resources are priced at a flat rate of Rs. 279 (approx. $1 USD), including courses, software toolkits, templates, graphics, and e-books.
+
+## Key Store Sections
+- **Storefront & Catalog**: https://www.zohaibdigiforge.store/resources
+- **Online Courses**: https://www.zohaibdigiforge.store/resources?category=courses
+- **Pro Tools Subscriptions**: https://www.zohaibdigiforge.store/resources?category=pro-tools
+- **Softwares & Utilities**: https://www.zohaibdigiforge.store/resources?category=softwares
+- **Templates & UI Kits**: https://www.zohaibdigiforge.store/resources?category=templates
+- **Graphics & Video Assets**: https://www.zohaibdigiforge.store/resources?category=graphics-assets
+- **E-Books & Guides**: https://www.zohaibdigiforge.store/resources?category=ebooks
+- **Custom Services**: https://www.zohaibdigiforge.store/services
+- **FAQ & Support**: https://www.zohaibdigiforge.store/faq
+- **Customer Portal**: https://www.zohaibdigiforge.store/dashboard
+
+## Accepted Payment Methods
+- JazzCash (Account & Till ID)
+- EasyPaisa (Mobile Account)
+- SadaPay / NayaPay
+- Pakistani Raast & Interbank Bank Transfers (IBFT)
+- Binance Pay & USDT / Crypto Transfers
+
+## Delivery Mechanism
+All digital resources are delivered instantly via secure Google Drive shared links and direct license key activations immediately after order confirmation. Customers can track their order status anytime at https://www.zohaibdigiforge.store/dashboard using their Order ID.

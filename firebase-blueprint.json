@@ -1,0 +1,338 @@
+{
+  "entities": {
+    "Category": {
+      "title": "Category",
+      "description": "Resource categories",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "slug": { "type": "string" },
+        "icon": { "type": "string" },
+        "description": { "type": "string" },
+        "order": { "type": "number" },
+        "itemCount": { "type": "number" }
+      },
+      "required": ["id", "name", "slug"]
+    },
+    "Bundle": {
+      "title": "Bundle",
+      "description": "Curated resource bundles",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "thumbnail": { "type": "string" },
+        "pricePKR": { "type": "number" },
+        "priceUSD": { "type": "number" },
+        "worthPKR": { "type": "number" },
+        "worthUSD": { "type": "number" },
+        "itemCount": { "type": "number" },
+        "description": { "type": "string" }
+      },
+      "required": ["id", "title", "pricePKR", "priceUSD"]
+    },
+    "Collection": {
+      "title": "Collection",
+      "description": "Daily Drop Collections per category",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "categoryId": { "type": "string" },
+        "name": { "type": "string" },
+        "pricePKR": { "type": "number" },
+        "priceUSD": { "type": "number" },
+        "billingPeriod": { "type": "string" }
+      },
+      "required": ["id", "categoryId", "name", "pricePKR", "priceUSD"]
+    },
+    "MegaPass": {
+      "title": "MegaPass",
+      "description": "The Mega Pass Lifetime Flagship Offer",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "headline": { "type": "string" },
+        "pricePKR": { "type": "number" },
+        "priceUSD": { "type": "number" }
+      },
+      "required": ["id", "title", "pricePKR", "priceUSD"]
+    },
+    "ToolBundle": {
+      "title": "ToolBundle",
+      "description": "Pro Tools Bundles",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "toolCount": { "type": "number" },
+        "bundlePricePKR": { "type": "number" },
+        "bundlePriceUSD": { "type": "number" }
+      },
+      "required": ["id", "name", "bundlePricePKR", "bundlePriceUSD"]
+    },
+    "ContactInquiry": {
+      "title": "ContactInquiry",
+      "description": "User contact and support inquiries",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "inquiryType": { "type": "string" },
+        "message": { "type": "string" },
+        "whatsapp": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["name", "email", "inquiryType", "message", "status", "createdAt"]
+    },
+    "SiteSettings": {
+      "title": "SiteSettings",
+      "description": "Global site configurations, contact information, and social links",
+      "type": "object",
+      "properties": {
+        "whatsappNumber": { "type": "string" },
+        "whatsappDisplay": { "type": "string" },
+        "whatsappResponseTime": { "type": "string" },
+        "email": { "type": "string" }
+      },
+      "required": ["whatsappNumber", "email"]
+    },
+    "SitePricing": {
+      "title": "SitePricing",
+      "description": "Single centrally-controlled flat price configuration for all resources",
+      "type": "object",
+      "properties": {
+        "flatPricePKR": { "type": "number" },
+        "flatPriceUSD": { "type": "number" },
+        "lastUpdated": { "type": "string" }
+      },
+      "required": ["flatPricePKR", "flatPriceUSD"]
+    },
+    "LegalPageDoc": {
+      "title": "LegalPageDoc",
+      "description": "Legal page document with sections and timestamps",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "eyebrow": { "type": "string" },
+        "intro": { "type": "string" },
+        "lastUpdated": { "type": "string" },
+        "sections": { "type": "array" }
+      },
+      "required": ["id", "title", "intro", "lastUpdated"]
+    },
+    "Review": {
+      "title": "Review",
+      "description": "Verified purchaser review linked to delivered order",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "orderId": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "productId": { "type": "string" },
+        "productTitle": { "type": "string" },
+        "productThumbnail": { "type": "string" },
+        "productCategory": { "type": "string" },
+        "rating": { "type": "number" },
+        "reviewText": { "type": "string" },
+        "photoUrl": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+        "createdAt": { "type": "string" },
+        "approvedAt": { "type": "string" },
+        "adminNote": { "type": "string" },
+        "helpfulCount": { "type": "number" }
+      },
+      "required": ["orderId", "productId", "rating", "reviewText", "status", "createdAt"]
+    },
+    "Notification": {
+      "title": "Notification",
+      "description": "In-app customer dashboard notifications for order updates and review requests",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "type": { "type": "string", "enum": ["review_request", "order_delivered", "system_announcement"] },
+        "title": { "type": "string" },
+        "message": { "type": "string" },
+        "relatedOrderId": { "type": "string" },
+        "productId": { "type": "string" },
+        "productTitle": { "type": "string" },
+        "productThumbnail": { "type": "string" },
+        "isRead": { "type": "boolean" },
+        "createdAt": { "type": "string" },
+        "link": { "type": "string" }
+      },
+      "required": ["id", "type", "message", "relatedOrderId", "isRead", "createdAt"]
+    },
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile with role, membership, and login tracking details",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string", "enum": ["customer", "admin", "super_admin"] },
+        "membershipStatus": { "type": "string" },
+        "status": { "type": "string", "enum": ["active", "suspended", "pending"] },
+        "createdAt": { "type": "string" },
+        "lastLoginAt": { "type": "string" },
+        "authProvider": { "type": "string" },
+        "loginCount": { "type": "number" },
+        "deviceInfo": { "type": "string" },
+        "ipAddress": { "type": "string" },
+        "ordersCount": { "type": "number" }
+      },
+      "required": ["uid", "email", "role", "createdAt"]
+    },
+    "AuditLog": {
+      "title": "AuditLog",
+      "description": "System, auth, order, and admin event audit trail",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "action": { "type": "string" },
+        "category": { "type": "string", "enum": ["auth", "order", "admin", "security", "catalog", "system"] },
+        "severity": { "type": "string", "enum": ["info", "success", "warning", "danger"] },
+        "actorEmail": { "type": "string" },
+        "actorName": { "type": "string" },
+        "actorRole": { "type": "string" },
+        "actorUid": { "type": "string" },
+        "ipAddress": { "type": "string" },
+        "deviceInfo": { "type": "string" },
+        "details": { "type": "string" },
+        "targetId": { "type": "string" },
+        "targetType": { "type": "string" }
+      },
+      "required": ["id", "timestamp", "action", "category", "severity"]
+    },
+    "FAQ": {
+      "title": "FAQ",
+      "description": "Frequently Asked Questions items across storefront",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "question": { "type": "string" },
+        "answer": { "type": "string" },
+        "category": { "type": "string" },
+        "order": { "type": "number" },
+        "isActive": { "type": "boolean" }
+      },
+      "required": ["question", "answer", "category"]
+    },
+    "ChatLog": {
+      "title": "ChatLog",
+      "description": "AI Assistant chat logs for security auditing and common queries",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userMessage": { "type": "string" },
+        "aiResponse": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["userMessage", "aiResponse", "timestamp"]
+    },
+    "CloudBackup": {
+      "title": "CloudBackup",
+      "description": "Automated and manual Firestore cloud backups in Excel format",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "filename": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "triggerType": { "type": "string" },
+        "fileSizeBytes": { "type": "number" },
+        "fileSizeFormatted": { "type": "string" },
+        "recordCounts": { "type": "object" },
+        "status": { "type": "string" },
+        "downloadUrl": { "type": "string" }
+      },
+      "required": ["id", "filename", "timestamp", "triggerType", "status"]
+    },
+    "AnalyticsEvent": {
+      "title": "AnalyticsEvent",
+      "description": "User activity and visitor analytics events",
+      "type": "object",
+      "properties": {
+        "event": { "type": "string" },
+        "params": { "type": "object" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["event", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/analytics_events/{eventId}": {
+      "schema": "AnalyticsEvent",
+      "description": "Storefront analytics and page view tracking events"
+    },
+    "/categories/{categoryId}": {
+      "schema": "Category",
+      "description": "Category documents"
+    },
+    "/bundles/{bundleId}": {
+      "schema": "Bundle",
+      "description": "Curated bundle offers"
+    },
+    "/collections/{collectionId}": {
+      "schema": "Collection",
+      "description": "Daily Drop Collection offers"
+    },
+    "/mega_pass/{docId}": {
+      "schema": "MegaPass",
+      "description": "Mega Pass Offer document"
+    },
+    "/tool_bundles/{bundleId}": {
+      "schema": "ToolBundle",
+      "description": "Pro Tool Bundles"
+    },
+    "/contactInquiries/{inquiryId}": {
+      "schema": "ContactInquiry",
+      "description": "User contact inquiries collection"
+    },
+    "/siteSettings/{settingId}": {
+      "schema": "SiteSettings",
+      "description": "Global site settings document"
+    },
+    "/legalPages/{pageId}": {
+      "schema": "LegalPageDoc",
+      "description": "Dynamic legal policy pages"
+    },
+    "/reviews/{reviewId}": {
+      "schema": "Review",
+      "description": "Verified customer reviews collection"
+    },
+    "/notifications/{notificationId}": {
+      "schema": "Notification",
+      "description": "Customer in-app notifications collection"
+    },
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Customer and admin user profiles"
+    },
+    "/audit_logs/{logId}": {
+      "schema": "AuditLog",
+      "description": "System and security audit log records"
+    },
+    "/faqs/{faqId}": {
+      "schema": "FAQ",
+      "description": "Frequently Asked Questions collection"
+    },
+    "/chatLogs/{logId}": {
+      "schema": "ChatLog",
+      "description": "AI Assistant chat logs collection for security auditing"
+    },
+    "/cloud_backups/{backupId}": {
+      "schema": "CloudBackup",
+      "description": "Firestore automated and manual backups"
+    }
+  }
+}

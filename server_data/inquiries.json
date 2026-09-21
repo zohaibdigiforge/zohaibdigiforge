@@ -1,0 +1,14 @@
+[
+  {
+    "id": "INQ-MTLCAS6Z",
+    "name": "Ali Raza",
+    "email": "aliraza@gmail.com",
+    "whatsapp": "",
+    "subject": "General Inquiry",
+    "message": "Hello ZDF team, testing backend strength.",
+    "type": "contact",
+    "budget": "",
+    "status": "new",
+    "createdAt": "2026-09-03T09:45:46.043Z"
+  }
+]
